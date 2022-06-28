@@ -1,14 +1,16 @@
 import { Test, TestingModule } from '@nestjs/testing';
+import { ConfigModule } from '@nestjs/config';
+import { TypeOrmModule } from '@nestjs/typeorm';
+
 import { CatController } from '../../../src/cat/cat.controller';
 import { CatService } from '../../../src/cat/cat.service';
 import { CreateCatDto } from '../../../src/cat/dto/cat-create.dto';
 
 import { DatabaseModule } from '../../database/database.module';
-import { ConfigModule } from '@nestjs/config';
 
 import DatabaseConfig from '../../config/database.config';
-import AppConfig from '../../../src/config/app.config';
-import { TypeOrmModule } from '@nestjs/typeorm';
+import AppConfig from '../../config/app.config';
+
 import { Cat } from '../../../src/cat/entities/cat.entity';
 
 describe('CatController', () => {

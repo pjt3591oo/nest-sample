@@ -1,12 +1,13 @@
-import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication, ValidationPipe } from '@nestjs/common';
-import * as request from 'supertest';
-import { CatModule } from '../../../src/cat/cat.module';
-import { DatabaseModule } from '../../../src/database/database.module';
+import { Test, TestingModule } from '@nestjs/testing';
 import { ConfigModule } from '@nestjs/config';
+import * as request from 'supertest';
+
+import { CatModule } from '../../../src/cat/cat.module';
+import { DatabaseModule } from '../../database/database.module';
 
 import DatabaseConfig from '../../config/database.config';
-import AppConfig from '../../../src/config/app.config';
+import AppConfig from '../../config/app.config';
 
 describe('AppController (e2e)', () => {
   let app: INestApplication;
